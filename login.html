@@ -36,6 +36,7 @@
 
   <!-- insert login page -->
   <!--login box html code-->
+  <!--Remove section and implement div . ME nahi krt te nahi tr tula cunfussion hoil ;(-->
   <section class="login-container hidden">
     <div class="exit" id="login-exit">x<!-- @samarth x icon goes here --></div>
     <div class="form-box">
@@ -67,6 +68,38 @@
       </div>
     </div>
   </section>
+  <section class="login-container hidden">
+    <div class="exit" id="sign-exit">x<!-- @samarth x icon goes here --></div> <!--Id changed to sign-exit for sign and login-exit for login-->
+    <div class="form-box">
+      <div class="form-value">
+        <form action="">
+          <div class="exit" id="sign-exit">x<!-- @samarth x icon goes here --></div>
+          <h2>Sign Up</h2>
+          <div class="inputbox">
+            <ion-icon name="mail-unread-outline"></ion-icon>
+            <input type="email">
+            <label for="">Email</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password">
+            <label for="">password</label>
+          </div>
+          <div class="forget">
+            <label for=""><input type="checkbox">Remember Me</label>
+           <!--Removing Forget password box for obvious reasons-->
+          </div>
+          <button>
+            Sign Up
+          </button>
+          <div class="register">
+            Already have an account? <a href="#">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
 
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
