@@ -14,7 +14,7 @@
 .sidebar {
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     top: 60px;
     bottom: 0;
     width: g.$sidebar-width;
@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px 10px 10px;
     color: #fff;
     background-color: green;
 }
@@ -35,12 +34,20 @@
     // display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px 10px 10px;
     width: 100px;
-    background-color: red;
+    background-color: rgb(0, 100, 0);
     text-decoration: none;
-    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
     display: none;
+}
+
+.icon_name>div,
+.icon>div {
+    padding: 0.5rem;
 }
 
 .sidebar:hover>.icon_name {
