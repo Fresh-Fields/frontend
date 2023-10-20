@@ -1,5 +1,6 @@
 import yield_data from '/src/yield.json';
 import rec_data from '/src/rec.json';
+import sample_rec_data from '/src/sample.crop.rec.json'
 
 let rec_form = document.querySelector("#crop-recommendation-grid");
 let yield_form = document.querySelector("#yield-production-grid");
@@ -22,6 +23,11 @@ let popup = document.querySelector(".result");
 let popup_label = popup.querySelector(".popup-content")
 
 
+let randomProperty = obj => {
+  const keys = Object.keys(obj);
+  return obj[keys[keys.length * Math.random() << 0]];
+}
+
 // populate `select`
 yield_data.crops.forEach((e, i) => {
   let option = document.createElement("option");
@@ -31,19 +37,18 @@ yield_data.crops.forEach((e, i) => {
 });
 
 /// setup autofill ///
+rec_form.querySelector(".data-button").onclick = () => {
+  let data = randomProperty(sample_rec_data);
 
-rec_form.querySelectorAll(".data-button")[0].onclick = () => {
   // NPK content
-  N.value = ~~(Math.random() * 141);
-  P.value = 5 + ~~(Math.random() * 146);
-  K.value = 5 + ~~(Math.random() * 206);
-}
+  N.value = data["N"];
+  P.value = data["P"];
+  K.value = data["K"];
 
-rec_form.querySelectorAll(".data-button")[1].onclick = () => {
-  temp_rec.value = 22 + Math.random() * 5;
-  humidity.value = 60 + Math.random() * 30;
-  pH.value = 3.5 + Math.random() * 6.5;
-  rainfall.value = 20 + Math.random() * 280;
+  temp_rec.value = data["temperature"];
+  humidity.value = data["humidity"];
+  pH.value = data["ph"];
+  rainfall.value = data["rainfall"];
 }
 
 yield_form.querySelector(".data-button").onclick = () => {
@@ -100,7 +105,7 @@ yield_form.querySelector(".report-button").onclick = () => {
   ).then((res) => res.json()
   ).then((data) => {
     let res = data["response"];
-    popup_label.innerHTML = `Predicted yield: <h2>${res}</h2> ton/hectare`;
+    popup_label.innerHTML = `Predicted yield: <h2>${res.toFixed(3)}</h2> ton/hectare`;
     popup.classList.remove("hidden");
   });
 }
