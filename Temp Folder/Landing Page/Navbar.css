@@ -1,0 +1,55 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Caveat&family=Lato:wght@300;400;700;900&family=Roboto:wght@300;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* To get border as well as padding inside the width X height */
+}
+
+html{
+    font-size:62.5%;
+}
+
+.header{
+    padding: 0 4.8rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsla(91, 23%, 26%, 1);
+
+background: linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+
+background: -moz-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+
+background: -webkit-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#435334", endColorstr="#405634", GradientType=1 );
+}
+
+.header .logo{
+    font-family: 'Cabin', sans-serif;
+    font-size: 3.5rem;
+    color: #E7B10A;
+}
+
+.navbar-list{
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+}
+
+.navbar-link:link, .navbar-link:visited{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #FAF1E4;
+    transition: all 0.3s;
+}
+
+.navbar-link:hover , .navbar-link:active{
+    color:#CEDEBD;
+}
+
