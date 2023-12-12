@@ -287,9 +287,12 @@
     districtNameElement.textContent = `${district}`;
     districtRainfallElement.textContent = `${getRainfall(district)} mm`
     districtHumidityElement.textContent = `${getTemp(district)} °c`
-
-    
-    //alert(`Selected District: ${district}`); // Show alert for the selected district
+    const nValue = districts[district]['N-ratio'];
+    const pValue = districts[district]['P-ratio'];
+    const kValue = districts[district]['K-ratio'];
+  
+    myChart.data.datasets[0].data = [nValue, pValue, kValue];
+    myChart.update();
   }
 
   document.addEventListener('click', function (event) {
@@ -311,3 +314,21 @@
     });
     document.querySelector('.watermark').style.display = filter === '' ? 'block' : 'none'; // Hide watermark when typing
   });
+
+  /*        *****Graphical work*****       */ 
+
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var myChart = new Chart(ctx,{
+
+    type:"doughnut",
+    data:{
+        labels:["Nitrogen","Phosphorus","Potassium"],
+        datasets:[{
+            data:[1,1,1],
+            label:"N:P:K Ratio",
+            backgroundColor:["red","blue","yellow"],
+        }]
+    },
+
+})
