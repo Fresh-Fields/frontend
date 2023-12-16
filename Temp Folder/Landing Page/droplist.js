@@ -3,6 +3,7 @@
   const districtNameElement = document.querySelector('.district-name-span');
   const districtRainfallElement = document.querySelector('.rainfall-data');
   const districtHumidityElement = document.querySelector('.humidity-data');
+  const districtMapElement = document.querySelector('img');
 
   /*        *****All the district data*****         */
 
@@ -293,6 +294,10 @@
   
     myChart.data.datasets[0].data = [nValue, pValue, kValue];
     myChart.update();
+
+    const imagePath = `../../assets/maps_district/${district}.jpg`
+    districtMapElement.src = imagePath
+    
   }
 
   document.addEventListener('click', function (event) {
