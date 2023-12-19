@@ -19,13 +19,16 @@ html{
     align-items: center;
     background: hsla(91, 23%, 26%, 1);
 
-background: linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+    background: linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
 
-background: -moz-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+    background: -moz-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
 
-background: -webkit-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
+    background: -webkit-linear-gradient(135deg, hsla(91, 23%, 26%, 1) 40%, hsla(99, 25%, 27%, 1) 53%, hsla(111, 28%, 36%, 1) 84%);
 
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#435334", endColorstr="#405634", GradientType=1 );
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#435334", endColorstr="#405634", GradientType=1 );
+    position:fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .header .logo{
@@ -51,5 +54,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#435334", en
 
 .navbar-link:hover , .navbar-link:active{
     color:#CEDEBD;
+}
+
+.adjusting-div{
+    width: 100%;
+    height: 100px;
 }
 
