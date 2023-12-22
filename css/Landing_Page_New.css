@@ -81,10 +81,18 @@
   }
 
   .map-img{
-    width: 40%;
-    height:auto;
+    width:800px;
+    height:650px;
     display: inline-block;
     box-shadow:  5px gray;
+    background-color: white;
+    object-position: center;
+    object-fit: contain;
+  }
+  img{
+     border-color: white;
+     width: 800px;
+     height: 650px;
   }
 
   .map-data{
