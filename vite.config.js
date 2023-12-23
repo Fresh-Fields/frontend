@@ -7,8 +7,7 @@ export default {
     rollupOptions: {
       input: {
         base: resolve(__dirname, 'base.html'),
-        analytics: resolve(__dirname, 'ml.html'),
-        landing: resolve(__dirname, 'landing.html'),
+        landing: resolve(__dirname, 'LandingPage_New.html'),
         dashboard: resolve(__dirname, 'dashboard.html'),
         ml: resolve(__dirname, 'ml.html'),
       },

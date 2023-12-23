@@ -1,3 +1,6 @@
+  import Chart from 'chart.js/auto'
+  
+  
   const inputElement = document.getElementById('districtInput');
   const listElement = document.getElementById('districtList');
   const districtNameElement = document.querySelector('.district-name-span');
@@ -276,11 +279,11 @@
     }
   }
 
-  function toggleList() {
+  export function toggleList() {
     listElement.style.display = listElement.style.display === 'block' ? 'none' : 'block';
   }
 
-  function selectDistrict(district) {
+  export function selectDistrict(district) {
     inputElement.value = district;
     inputElement.classList.add('selected');
     listElement.style.display = 'none';
