@@ -8,26 +8,57 @@ main{
     display: grid;
     grid-template-columns: 60fr 40fr;
     grid-template-rows: 1fr;
+    gap: 30px;
+    margin-top:20px ;
+    margin-left: 10px;
+    margin-right: 20px;
     
 }
 
 .left-side{
     background-color: #FDF5E6;
+    /* box-shadow: 8px 8px 5px #435334; */
+    box-shadow: 8px 8px 5px rgb(157, 152, 134);
+    padding-top: 40px;
+    font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif;
 }
 
 .right-side{
     background-color: #CEDEBD;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
     place-items: center;
+    gap:20px;
+    /* box-shadow:rgb(157, 152, 134); */
+    box-shadow: 8px 8px 5px #435334;
+    
+
 
 }
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    /* font-size: 15px; */
+    text-shadow: 10px #888;
+}
 
-.graph{
-    width: 45rem;
-    height: 30rem;
+.graph-1_graph{
+    width:45rem;
+    height:30rem;
     background-color:#FAF3F0 ;
+    border-radius: 10px;
+    /* margin-bottom: -10px;   */
+}
+.graph-2_graph{
+    width:45rem;
+    height: 30rem;
+    margin-bottom: 20px;
+    background-color:#FAF3F0 ;
+    border-radius: 10px;
 }
 
 .name-div{
@@ -181,3 +212,4 @@ main{
     font-size: 1.6rem;
     color: #888;
   }
+  
