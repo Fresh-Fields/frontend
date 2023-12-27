@@ -4,40 +4,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/global.scss">
-  <link rel="stylesheet" href="/css/navbar.scss">
-  <link rel="stylesheet" href="/css/sidebar.scss">
-  <link rel="stylesheet" href="/css/loginpage.scss">
+  <!-- <link rel="stylesheet" href="/css/global.scss"> -->
+  <link rel="stylesheet" href="/css/navbar.css">
+  <!-- <link rel="stylesheet" href="/css/loginpage.scss"> -->
   {% block head %}{% endblock %}
 </head>
 
 <body>
   <!-- insert navigation bar -->
-  <nav>
-    <button class="start_button"> <!--nav is used for button so dont use it for any other-->
-      Get Started
-    </button>
-  </nav>
+  <header class="header"> <!--Header is used for navbar-->
 
-  <!-- insert sidebar -->
-  <div class="sidebar">
-    <div class="icon">
-      <div><ion-icon name="home-outline"></ion-icon></div>
-      <div><ion-icon name="settings-outline"></ion-icon></div>
-      <div><ion-icon name="at-outline"></ion-icon></div>
-    </div> <!-- In sidebar the class sidebar is given flex box property row and its child with column -->
-    <div class="icon_name">
-      <div><a href>Home</a></div>
-      <div><a href>Setting</a></div>
-      <div><a href>About</a></div>
+    <h1 class="logo">Kisan:Sevak</h1> <!--Logo of project placed on the left in navbar-->
 
-    </div>
+    <nav class="navbar">
+      <!--No of pages are just for my reference (Samarth :) ) ones all the pages are created they need to be trimmed and linked accordingly-->
+      <ul class="navbar-list">
+        <li><a href="#" class="navbar-link">Home</a></li>
+        <li><a href="#" class="navbar-link">Profile</a></li>
+        <li><a href="#" class="navbar-link">Setting</a></li>
+        <li><a href="#" class="navbar-link">About</a></li>
+        <li><a href="#" class="navbar-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="adjusting-div">
+    <!--Used for adjusting the navbar properly-->
   </div>
+
 
   <!-- insert login page -->
   <!--login box html code-->
   <!--Remove section and implement div . ME nahi krt te nahi tr tula cunfussion hoil ;(-->
-  <div class="login-container hidden">
+
+  <div class="login-container hidden" hidden>
     <div class="exit" id="login-exit">x<!-- @samarth x icon goes here --></div>
     <div class="form-box">
       <div class="form-value">
@@ -67,7 +67,7 @@
     </div>
   </div>
 
-  <div class="signup-container hidden">
+  <div class="signup-container hidden" hidden>
     <div class="exit" id="signup-exit">x<!-- @samarth x icon goes here --></div>
     <!--Id changed to signup-exit for sign and login-exit for login-->
     <div class="form-box">
@@ -102,7 +102,7 @@
     {% block body %}{% endblock %}
   </div>
 
-  <script type="module" src="/src/main.js"></script>
+  <!-- <script type="module" src="/src/main.js"></script> -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
