@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
 
     <style>
         *{
@@ -143,34 +143,35 @@ body{
 <body>
     
     <div class="wrapper">
-        <form method="post" action="{{ url_for('login') }}">
+        <form method="post" action="{{ url_for('signup') }}">
             <div class="head">
-                <h1>Login</h1>
+                <h1>Sign up</h1>
             </div>
-            <div class="error">
-                {% if error %}
-                    <span>{{ error }}</span>
-                {% endif %}
-            </div>
-
             <div class="input-box">
                 <input type="text" placeholder="Enter Username" id="login_id" name="login_id" required>
-                <box-icon type='solid' name='user'></box-icon>
+                <box-icon type='logo' name='gmail'></box-icon>
             </div>
             <div class="input-box">
                 <input type="password" placeholder="Enter password" id="password" name="password" required>
                 <box-icon name='lock-alt'></box-icon>
             </div>
+            <div class="input-box">
+                <input type="text" placeholder="Enter your district" id="district" name="district" required>
+                <box-icon name='current-location'></box-icon>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Enter your name" id="name" name="name" required>
+                <box-icon type='solid' name='user'></box-icon>
+            </div>
 
             <div class="remember-forget">
                 <label><input type="checkbox">Remember Me</label>
-                <a href="#">Forgot Password ?</a>
             </div>
 
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn">Sign Up</button>
 
             <div class="register-link">
-                <p>Don't have an account ? <a href="{{ url_for('signup') }}">register</a></p>
+                <p>Already have an account ? <a href="{{ url_for('login') }}">login</a></p>
             </div>
 
         </form>
