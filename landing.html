@@ -1,52 +1,13 @@
-{% extends 'base.html' %}
+{% extends 'index.html' %}
 {% block head %}
 <title>Welcome - KisanSevak</title>
-<link rel="stylesheet" href="/css/landing.css">
 {% endblock %}
 {% block body %}
-<div class="map-list">
-  <div class="dropdown-container">
-    <input type="text" class="dropdown-input" id="districtInput" placeholder=" ">
-    <div class="arrow-icon" id="list-selector">&#9660;</div>
-    <div class="watermark">Select District</div>
-    <div class="dropdown-list" id="districtList">
-      <!-- district options here will be populated by JS instead -->
-    </div>
-  </div>
-  <div class="map-img">
-    <img src="/assets/Maharashtra-Map-of-India.jpg">
-  </div>
-</div>
-<div class="map-data">
-  <div class="district-name">
-    <h1><span class="district-name-span">Maharashtra District Information</span></h1>
-  </div>
-  <div class="district-ratio">
-    <div>
-      <h2>N:P:K ratio</h2>
-    </div>
-    <div><canvas id="myChart" aria-label="chart" role="img"></canvas></div>
-  </div>
-  <div class="district-data">
-    <div class="avg rainfall">
-      <div>
-        <h2>Avg. Rainfall</h2>
-      </div>
-      <div>
-        <p><span class="rainfall-data">500 mm</span></p>
-      </div>
-    </div>
-    <div class="avg temp">
-      <div>
-        <h2>Avg. temperature</h2>
-      </div>
-      <div>
-        <p><span class="humidity-data">40 °C</span></p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script src="/src/landing.js" type="module"></script>
+<!-- test text -->
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut maiores dolor quis officiis fugit blanditiis, quas dolorem
+ipsum suscipit explicabo possimus? Sunt excepturi, dignissimos quaerat inventore nam nisi doloremque magnam.
+Itaque iusto in eligendi iste perspiciatis. Voluptatibus odit iure perspiciatis? Sequi cum totam, iste aliquid voluptas
+facere voluptatum exercitationem officiis at vitae nemo ab tenetur debitis doloremque minus tempore molestiae!
+Fugiat illum alias iste cum repudiandae veniam possimus aliquid odio. Perferendis deserunt numquam libero alias?
+Explicabo eaque tenetur praesentium ea alias voluptate blanditiis dolorem delectus, repudiandae ipsa error vero neque!
 {% endblock %}

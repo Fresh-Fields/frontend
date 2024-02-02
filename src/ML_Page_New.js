@@ -1,3 +1,5 @@
+import { pick } from "./src/socket.js"
+
 const inputElement = document.getElementById('districtInput');
 const listElement = document.getElementById('districtList');
 
@@ -41,10 +43,10 @@ const listElement = document.getElementById('districtList');
   new Chart(graph_1, {
     type: 'line',
     data: {
-      labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+      labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'], // Change the time according to the data modification
       datasets: [{
         label: 'Yield/Hector',
-        data: [12, 19, 3, 5, 2, 3],
+        data: pick("Yeild"),
         borderWidth: 1,
         backgroundColor: ["#FFCC1D"]
       }]
@@ -66,19 +68,19 @@ const listElement = document.getElementById('districtList');
       labels: ['January', 'February', 'March', 'April', 'May'],
       datasets: [{
         label: 'Nitrogen', // Changed from array to string
-        data: [50, 60, 70, 80, 90],
+        data: pick("N"),  // Import fuction pick from socket.js fetching the array
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 2,
         fill: false
       }, {
         label: 'Phosphorus', // Changed from array to string
-        data: [40, 50, 60, 70, 80],
+        data: pick("P"),
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 2,
         fill: false
       }, {
         label: 'Potassium', // Changed from array to string
-        data: [30, 40, 50, 60, 70],
+        data: pick("K"),
         borderColor: 'rgba(255, 206, 86, 1)',
         borderWidth: 2,
         fill: false

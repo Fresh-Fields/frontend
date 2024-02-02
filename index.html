@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/global.scss">
-  <link rel="stylesheet" href="css/navbar.scss">
-  <link rel="stylesheet" href="css/sidebar.scss">
-  <link rel="stylesheet" href="css/loginpage.scss">
-
+  <link rel="stylesheet" href="/css/global.scss">
+  <link rel="stylesheet" href="/css/navbar.scss">
+  <link rel="stylesheet" href="/css/sidebar.scss">
+  <link rel="stylesheet" href="/css/Loginpage.css">
+  {% block head %}{% endblock %}
 </head>
 
 <body>
@@ -99,7 +99,7 @@
   </div>
 
   <div id="content">
-    
+    {% block body %}{% endblock %}
   </div>
 
   <script type="module" src="/src/main.js"></script>
