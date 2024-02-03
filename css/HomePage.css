@@ -71,7 +71,7 @@ main{
 }
 
 .opener-box:hover{
-    background-image: url(/assets/Backgroud-LandingPage.png);
+    /* background-image: url(/assets/Backgroud-LandingPage.png); */
     background-color: transparent;
     background-size: cover;
 
