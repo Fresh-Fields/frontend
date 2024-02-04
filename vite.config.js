@@ -6,14 +6,14 @@ export default {
     outDir: '../dist',
     rollupOptions: {
       input: {
+        base: resolve(__dirname, 'base.html'),
+
         login: resolve(__dirname, 'login.html'),
         signup: resolve(__dirname, 'signup.html'),
 
-        base: resolve(__dirname, 'base.html'),
-        analytics: resolve(__dirname, 'ml.html'),
-        landing: resolve(__dirname, 'landing.html'),
-        dashboard: resolve(__dirname, 'dashboard.html'),
-        ml: resolve(__dirname, 'ml.html'),
+        home: resolve(__dirname, 'HomePage.html'),
+        ml: resolve(__dirname, 'MLPage.html'),
+        landing: resolve(__dirname, 'LandingPage.html'),
       },
     }
   }
