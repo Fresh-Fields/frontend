@@ -1,4 +1,4 @@
-import { pick } from "./src/socket.js"
+import { pick } from "/src/socket.js"
 
 const inputElement = document.getElementById('districtInput');
 const listElement = document.getElementById('districtList');

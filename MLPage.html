@@ -1,43 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<title>ML page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Poppins:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/Navbar.css">
-    <link rel="stylesheet" href="./css/MLPage.css">
-    
-
-</head>
-<body>
-
-    <!--    ***** This section is for navbar ******      -->
-    
-    <header class="header">    <!--Header is used for navbar-->
-
-        <h1 class="logo">Kisan:Sevak</h1>   <!--Logo of project placed on the left in navbar-->
-
-        <nav class="navbar">       <!--No of pages are just for my reference (Samarth :) ) ones all the pages are created they need to be trimmed and linked accordingly-->
-            <ul class="navbar-list">
-                <li><a href="#" class="navbar-link">Home</a></li>
-                <li><a href="#" class="navbar-link">Profile</a></li>
-                <li><a href="#" class="navbar-link">Setting</a></li>
-                <li><a href="#" class="navbar-link">About</a></li>
-                <li><a href="#" class="navbar-link">Contact</a></li>
-            </ul>
-        </nav>
-
-      
-
-    </header>
-
-    <div class="adjusting-div">
-        <!--Used for adjusting the navbar properly-->        
-    </div>
-        <!--    *****  The main body of page starts from here *****     -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Poppins:ital@1&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="./css/MLPage.css">
+{% endblock %}
+{% block body %}
     <main>
         <div class="left-side">
             <!---->
@@ -76,67 +47,70 @@
                         <div class="arrow-icon" onclick="toggleList()">&#9660;</div>
                         <div class="watermark">Select a Crop</div>
                         <div class="dropdown-list" id="districtList">
-                          <!-- Add district options here -->
-                          <div class="dropdown-list-item" onclick="selectDistrict('Ahmednagar')">Ahmednagar</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Akola')">Akola</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Amravati')">Amravati</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Aurangabad')">Aurangabad</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Beed')">Beed</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Bhandara')">Bhandara</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Buldana')">Buldana</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Chandrapur')">Chandrapur</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Dhule')">Dhule</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Gadchiroli')">Gadchiroli</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Gondia')">Gondia</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Hingoli')">Hingoli</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Jalgaon')">Jalgaon</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Jalna')">Jalna</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Kolhapur')">Kolhapur</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Latur')">Latur</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Mumbai city')">Mumbai city</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Mumbai suburban')">Mumbai suburban</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Nagpur')">Nagpur</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Nanded')">Nanded</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Nandurbar')">Nandurbar</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Nashik')">Nashik</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Osamanabad')">Osamanabad</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Palghar')">Palghar</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Parbhani')">Parbhani</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Pune')">Pune</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Raigad')">Raigad</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Ratnagiri')">Ratnagiri</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Sangli')">Sangli</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Satara')">Satara</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Sindhudurg')">Sindhudurg</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Solapur')">Solapur</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Thane')">Thane</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Wardha')">Wardha</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Washim')">Washim</div>
-                          <div class="dropdown-list-item" onclick="selectDistrict('Yavatmal')">Yavatmal</div>
+                            <!-- Add district options here -->
+                            <div class="dropdown-list-item" onclick="selectDistrict('Ahmednagar')">Ahmednagar</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Akola')">Akola</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Amravati')">Amravati</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Aurangabad')">Aurangabad</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Beed')">Beed</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Bhandara')">Bhandara</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Buldana')">Buldana</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Chandrapur')">Chandrapur</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Dhule')">Dhule</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Gadchiroli')">Gadchiroli</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Gondia')">Gondia</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Hingoli')">Hingoli</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Jalgaon')">Jalgaon</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Jalna')">Jalna</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Kolhapur')">Kolhapur</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Latur')">Latur</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Mumbai city')">Mumbai city</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Mumbai suburban')">Mumbai suburban
+                            </div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Nagpur')">Nagpur</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Nanded')">Nanded</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Nandurbar')">Nandurbar</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Nashik')">Nashik</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Osamanabad')">Osamanabad</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Palghar')">Palghar</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Parbhani')">Parbhani</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Pune')">Pune</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Raigad')">Raigad</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Ratnagiri')">Ratnagiri</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Sangli')">Sangli</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Satara')">Satara</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Sindhudurg')">Sindhudurg</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Solapur')">Solapur</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Thane')">Thane</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Wardha')">Wardha</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Washim')">Washim</div>
+                            <div class="dropdown-list-item" onclick="selectDistrict('Yavatmal')">Yavatmal</div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div class="right-side"> 
+        <div class="right-side">
             <div class="graph-1_graph">
-                <div class="text"><h1>Yield Data Graph</h1></div>
+                <div class="text">
+                    <h1>Yield Data Graph</h1>
+                </div>
                 <canvas class="yield-data-graph"></canvas>
             </div>
             <!-- <div style="margin-bottom: 20px;"></div> -->
             <div class="graph-2_graph">
-                <div class="text"><h1>Sensor N:P:k Graph</h1></div>
+                <div class="text">
+                    <h1>Sensor N:P:k Graph</h1>
+                </div>
                 <canvas class="npk-data-graph"></canvas>
             </div>
         </div>
     </main>
-    
-    
+
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/src/MLPage.js"></script>
-    
-</body>
-</html>
+{% endblock %}

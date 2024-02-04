@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 export default {
   build: {
+    sourcemap: true,
     outDir: '../dist',
     rollupOptions: {
       input: {
@@ -15,6 +16,6 @@ export default {
         ml: resolve(__dirname, 'MLPage.html'),
         landing: resolve(__dirname, 'LandingPage.html'),
       },
-    }
-  }
+    },
+  },
 }
