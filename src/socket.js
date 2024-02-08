@@ -1,37 +1,41 @@
-const socket = new WebSocket(link);
-
-
-socket.addEventListener('open',(event) => {
-    console.log("Conection Established");
-
-    socket.send()
-})
+const socket = new WebSocket("ws://0.0.0.0:8765");
 
 let value = {
-    "N":[],
-    "P":[],
-    "K":[],
-    "Yeild":[]
+    "N": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "P": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "K": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "temperatureA": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "humidity": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "ph": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "pesticides_tonnes": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "temperatureB": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "market": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
 }
 
-function pick(key){
+export let initSocket = () => {
+    socket.addEventListener("open", e => {
+        console.log("Socket joined, yay!");
+    });
+    socket.addEventListener("message", ({ data }) => {
+        let values = JSON.parse(data);
+        for (let i = 0; i < values.length; i++)
+            push(value[Object.keys(value)[i]], values[i])
+    });
+}
+
+export let onRecv = fn => {
+    socket.addEventListener("message", fn);
+}
+
+export function peek(key) {
     return value[key];
 }
 
-function push(arr,value){
-    if(length(arr)>10){
-        arr.shift();
-    }
+export function push(arr, value) {
+    arr.shift();
     arr.push(value)
 }
 
-for (let key in value){
-    socket.addEventListener(key,(event) => {
-        const NumericValue = event.data;
-        push(value[key],NumericValue);
-    })
-}
-
-socket.addEventListener('close',(event) => {
+socket.addEventListener('close', (event) => {
     console.log("Connection Deminished")
 })
