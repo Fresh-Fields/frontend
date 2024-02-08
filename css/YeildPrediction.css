@@ -1,0 +1,90 @@
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 100%;
+    height: 80rem;
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    grid-template-rows: 1fr;
+}
+
+.left{
+    background-color: #FDF5E6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem 40rem auto;
+}
+
+.user-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name div{
+    width: 80%;
+    height: 70%;
+    background-color: #FAF3F0;
+    border: 3px solid #f0eae8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name div h1{
+    font-size: 5rem;
+}
+
+.info-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info > div{
+    width: 80%;
+    height: 80%;
+    background-color: #FAF3F0;
+    border: 3px solid #f0eae8;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35fr 65fr;
+}
+
+.info  h2{
+    font-size: 2.5rem;
+}
+
+.info h3{
+    font-size: 3rem;
+}
+
+
+.right{
+    background-color: #9EB384;
+}
+
+.graph-block{
+    width: 100%;
+    height: 50%;
+}
+
+.graph-div{
+    background-color: #CEDEBD;
+    width: 80%;
+    height: 30rem;
+}
+

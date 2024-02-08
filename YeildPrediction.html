@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block head %}
+<!doctype html>
+<title>Yeild Prediction</title>
+<link rel="stylesheet" href="./css/YeildPrediction.css">
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    
+    <div class="left">
+      <div class="user-name">
+          <!-- Add user name from the backend -->
+          <div>
+              <h1>Hello <span>User</span></h1> 
+          </div>
+      </div>
+      <div class="info-box">
+          <div class="info left-box">
+              <div>
+                  <div class="center info-top-div">
+                      <h2>Crop Planted</h2>
+                  </div>
+                  <div class="center info-bottom-div">
+                      <!-- Add Name of the crop from backend/websocket -->
+                      <h3><span>Crop Name</span></h3>
+                  </div>
+              </div>
+          </div>
+          <div class="info right-box">
+              <div>
+                  <div class="center info-top-div">
+                      <h2>Pesticide Used (in tonnes)</h2>
+                  </div>
+                  <div class="center info-bottom-div">
+                      <!-- Add Name of the crop from backend/websocket -->
+                      <h3><span>55 tons/hecter</span></h3>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="right">
+      
+      <div class="center graph-block">
+          <div class="graph-div">
+
+          </div>
+      </div>
+      <div class="center graph-block">
+          <div class="graph-div">
+              
+          </div>
+      </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

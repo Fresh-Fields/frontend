@@ -9,6 +9,10 @@ export default {
       input: {
         base: resolve(__dirname, 'base.html'),
 
+        crop: resolve(__dirname,'CropRecommendation.html'),
+        yield: resolve(__dirname,'YeildPrediction.html'),
+        Price: resolve(__dirname,'PriceForecast.html'),
+
         login: resolve(__dirname, 'login.html'),
         signup: resolve(__dirname, 'signup.html'),
 

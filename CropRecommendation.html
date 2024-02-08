@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block head %}
+<!DOCTYPE html>
+<title>Crop Recommendation</title>
+<link rel="stylesheet" href="./css/CropRecommendation.css"> 
+{% endblock %}
+
+{% block body %}
+<div class="center main">
+    <div class="inner-box">
+      <div class="upper-div">
+        <div class="npk-dabba center">
+          <div class="npk-graph border">
+            <div class="npk-graph-title center">
+              <h1>
+                N.P.K <br> Graph
+              </h1>
+            </div>
+            <div class="npk-actual-graph center">
+              <!-- Add N P K Graph in here -->
+            </div>
+          </div>
+        </div>
+        <div class="crop-dabba center">
+          <div class="crop-recomend border">
+            <div class="crop-recomend-title center">
+              <h1>Recommended Crop</h1>
+            </div>
+            <div class="crop-recomend-grap center">
+              <span>Crop</span>
+              <!-- Add Crop reccomendation  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle-div">
+        <div class="rainfall-dabba center">
+          <div class="rain adjust border center">
+            <div class="upper-title-box center">
+              <h1> Avg Rainfall </h1>
+            </div>
+            <div class="lower-value-box center">
+              <!-- Add avg Rainfall value in here  -->
+            </div>
+          </div>
+        </div>
+        <div class="season-dabba center">
+          <div class="season adjust border">
+            <div class="upper-title-box center">
+              <h1> Current Season </h1>
+            </div>
+            <div class="lower-value-box center">
+              <!-- Add Current season in here in here  -->
+            </div>
+          </div>
+        </div>
+        <div class="humidity-dabba center ">
+          <div class="humidity adjust border">
+            <div class="upper-title-box center">
+              <h1> Avg Humidity </h1>
+            </div>
+            <div class="lower-value-box center">
+              <!-- Add avg Humidity value in here  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lower-div">
+        <div class="right-dabba center">
+          <div class="temp-graph adj border">
+            <div class="lower-title center">
+              <h1>Avg <br> Temp</h1>
+            </div>
+            <div class="lower-graph center">
+              <!-- Add temperature graph here -->
+            </div>
+          </div>
+        </div>
+        <div class="left-dabba center">
+          <div class="ph-graph adj border">
+            <div class="lower-title center">
+              <h1>PH <br> Value</h1>
+            </div>
+            <div class="lower-graph center">
+              <!-- Add PH graph here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
