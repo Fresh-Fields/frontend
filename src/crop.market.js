@@ -3,6 +3,7 @@ import Chart from "chart.js/auto";
 import { initSocket, onRecv, peek } from "./socket";
 
 let graph = document.querySelector(".market-graph");
+let predictionDIV = document.querySelector(".prediction-div")
 
 initSocket();
 
@@ -15,7 +16,7 @@ const chart = new Chart(graph.getContext("2d"), {
     }
   },
   data: {
-    labels: [...Array(101).keys()],
+    labels: [...Array(101).fill(0).map((_, i) => i * 7)],
     datasets: [
       {
         label: "Market price",
@@ -23,18 +24,11 @@ const chart = new Chart(graph.getContext("2d"), {
       },
       {
         label: "Prediction",
-        data: [...Array(44).fill(0)]
+        data: [...Array(101).fill(10)]
       }
     ]
   },
 });
-
-function addData(chart, newData) {
-  chart.data.datasets.forEach((dataset) => {
-    dataset.data.push(newData);
-  });
-  chart.update();
-}
 
 onRecv(e => {
   const data_array = peek("market");
@@ -50,11 +44,9 @@ onRecv(e => {
     },
     body: JSON.stringify(data_array)
   }).then(res => res.json()).then(data => {
-    // console.log(data)
-    let data_arr = [...data];
-    while(data_arr.length < 101) data_arr.unshift(0);
-    chart.data.datasets[1].data =  data_arr;
+    predictionDIV.innerHTML = data.toFixed(2);
+    chart.data.datasets[1].data.shift();
+    chart.data.datasets[1].data.push(data);
     chart.update();
   });
-
 })

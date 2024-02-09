@@ -9,7 +9,7 @@ let value = {
     "ph": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
     "pesticides_tonnes": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
     "temperatureB": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
-    "market": Array(100).fill(0).map(v => 30 + Math.random() * 1 - 0.5),
+    "market": Array(100).fill(0).map(v => 2000 + Math.random() * 10 - 5),
 }
 
 export let initSocket = () => {
