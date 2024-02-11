@@ -2,6 +2,7 @@
     height: auto;
     width: 100%;
     background-color: #ebf3e8;
+
   }
 
   .dropdown-container {
@@ -43,13 +44,19 @@
     background-color: #ccc;
   }
 
-  .dropdown-list-item {
+/*  changes to be made  */
+
+  .dropdown-list > div{
+    font-size: 2rem;
+  }
+
+  .dropdown-list > div {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
 
-  .dropdown-list-item:hover {
+  .dropdown-list > div:hover {
     background-color: #f0f0f0;
   }
 
