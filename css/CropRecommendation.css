@@ -98,11 +98,11 @@
     text-align: center;
 }
 
-.npk-graph {
+/* .npk-graph {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-}
+} */
 
 .npk-graph h1 {
     font-size: 4rem;
