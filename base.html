@@ -1,41 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/Navbar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.scss">
   {% block head %}{% endblock %}
 </head>
 
 <body>
-  <!-- insert navigation bar -->
-  <header class="header"> <!--Header is used for navbar-->
-
-    <h1 class="logo">Kisan:Sevak</h1> <!--Logo of project placed on the left in navbar-->
-
-    <nav class="navbar">
-      <!--No of pages are just for my reference (Samarth :) ) ones all the pages are created they need to be trimmed and linked accordingly-->
-      <ul class="navbar-list">
-        <li><a href="/ml/recommend" class="navbar-link">Crop  Recommendation</a></li>
-        <li><a href="/ml/yield" class="navbar-link">Yield Prediction </a></li>
-        <li><a href="/ml/market" class="navbar-link">Price Forecast</a></li>
-
-      </ul>
-    </nav>
-  </header>
-
-  <div class="adjusting-div">
-    <!--Used for adjusting the navbar properly-->
+  <!-- CSS load hack -->
+  <script>;</script>
+  <div class="nav">
+    <div class="left">Kisan:Sevak</div>
+    <div class="right if-logged">
+    </div>
+    <div class="right else-logged">
+      <span>Login</span>
+      <span>Sign up</span>
+    </div>
   </div>
-
-  <div id="content">
+  <div class="nav-pushup"></div>
+  <main>
     {% block body %}{% endblock %}
+  </main>
+  <div class="form login" hidden>
+    <label for="phone-number">Phone number</label>
+    <input type="number" name="phone-number" id="phone-number" required />
+    <label for="district-locality">District/Locality</label>
+    <select id="district" required />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required />
   </div>
+  <div class="form signup" hidden>
+    <label for="phone-number">Phone number</label>
+    <input type="number" name="phone-number" id="phone-number" required />
+    <label for="district-locality">District/Locality</label>
+    <select id="district" required />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required />
+  </div>
+  <script>
+    let login = document.querySelector(".login");
+    let signup = document.querySelector(".signup");
 
-  <!-- <script type="module" src="/src/main.js"></script> -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    let loginBTN = document.querySelector(".loginBTN");
+    let loginBTN2 = document.querySelector(".loginBTN2");
+    let signupBTN = document.querySelector(".signupBTN");
+    let signupBTN2 = document.querySelector(".signupBTN2");
+  </script>
 </body>
 
 </html>

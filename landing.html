@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="./css/landing.scss">
+{% endblock %}
+{% block body %}
+<div class="hero">
+  <div class="content">
+    <h1>KisanSevak</h1>
+    <span>The future farmer's best friend.</span>
+    <span>
+      <button>login</button>
+      <button>sign up</button>
+    </span>
+  </div>
+  <div class="video">
+    <video src="./public/assets/seeds.mp4" autoplay muted></video>
+  </div>
+</div>
+<div class="rest">
+  <h1>Crop recommendation</h1>
+  <h2>Trust us.</h2>
+</div>
+<div class="rest">
+  <h1>Yield prediction</h1>
+</div>
+<div class="rest">
+  <h1>Market price forecasting</h1>
+</div>
+{% endblock %}

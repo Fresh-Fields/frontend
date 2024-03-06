@@ -1,0 +1,59 @@
+@use "./global.scss" as g;
+
+:root {
+  font-size: 20px;
+  background: g.$background;
+  font-family: "Mukta", sans-serif;
+}
+
+body {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+.nav {
+  width: 100%;
+  height: g.$navsize;
+  background: g.$secondary;
+  color: g.$shade;
+  position: fixed;
+  z-index: 20;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 1.5rem;
+
+  .left {
+    display: flex;
+    flex: 0 auto;
+    justify-content: start;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+
+    span {
+      padding: 0 1rem;
+      transition: filter 0.4s ease-out;
+      transition: transform 0.2s ease-out;
+
+      &:hover {
+        filter: brightness(1.2);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.nav-pushup {
+  visibility: hidden;
+  height: g.$navsize;
+}

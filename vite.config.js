@@ -9,16 +9,20 @@ export default {
       input: {
         base: resolve(__dirname, 'base.html'),
 
-        crop: resolve(__dirname,'CropRecommendation.html'),
-        yield: resolve(__dirname,'YeildPrediction.html'),
-        Price: resolve(__dirname,'PriceForecast.html'),
+        crop: resolve(__dirname, 'crop.html'), // classification
+        yield: resolve(__dirname, 'yield.html'), // regression
+        price: resolve(__dirname, 'forecast.html'), // time series
+
+        home: resolve(__dirname, 'home.html'),
+        landing: resolve(__dirname, 'landing.html'),
 
         login: resolve(__dirname, 'login.html'),
         signup: resolve(__dirname, 'signup.html'),
-
-        home: resolve(__dirname, 'HomePage.html'),
-        ml: resolve(__dirname, 'MLPage.html'),
-        landing: resolve(__dirname, 'LandingPage.html'),
+      },
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
       },
     },
   },

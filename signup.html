@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+<div class="form">
+  <label for="phone-number">Phone number</label>
+  <input type="number" name="phone-number" id="phone-number" required/>
+  <label for="district-locality">District/Locality</label>
+  <select id="district" required/>
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" required/>
+</div>
 
-   
-</head>
-<body>
-    
-    <div class="wrapper">
-        <form method="post" action="{{ url_for('signup') }}">
-            <div class="head">
-                <h1>Sign up</h1>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Enter Username" id="login_id" name="login_id" required>
-                <box-icon type='logo' name='gmail'></box-icon>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Enter password" id="password" name="password" required>
-                <box-icon name='lock-alt'></box-icon>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Enter your district" id="district" name="district" required>
-                <box-icon name='current-location'></box-icon>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Enter your name" id="name" name="name" required>
-                <box-icon type='solid' name='user'></box-icon>
-            </div>
-
-            <div class="remember-forget">
-                <label><input type="checkbox">Remember Me</label>
-            </div>
-
-            <button type="submit" class="btn">Sign Up</button>
-
-            <div class="register-link">
-                <p>Already have an account ? <a href="{{ url_for('login') }}">login</a></p>
-            </div>
-
-        </form>
-    </div>
-
-
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-</body>
-</html>
+<script>
+  
+</script>
