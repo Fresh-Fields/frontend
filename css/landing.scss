@@ -15,41 +15,24 @@
     align-items: center;
     background: #000a;
     color: g.$shade;
-
-    button {
-      background: g.$shade;
-      color: g.$secondary;
-      font-size: 1.5rem;
-      padding: .5rem;
-      margin: 1rem;
-      border: none;
-      border-radius: 0.5rem;
-      transition: color 0.2s ease-in;
-      transition: background 0.2s ease-out;
-
-      &:hover {
-        background: g.$secondary;
-        color: g.$shade;
-      }
-    }
   }
+}
 
-  .video {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - g.$navsize);
-    // filter: brightness(0.8) contrast(1.4);
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.video {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - g.$navsize);
+  // filter: brightness(0.8) contrast(1.4);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-    video {
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-    }
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -60,4 +43,25 @@
   justify-content: center;
   align-content: center;
   padding: 2rem;
+
+  strong {
+    color: g.$secondary;
+  }
+}
+
+button {
+  background: g.$shade;
+  color: g.$secondary;
+  font-size: 1.2rem;
+  padding: .5rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease-in;
+  transition: background 0.2s ease-out;
+
+  &:hover {
+    background: g.$secondary;
+    color: g.$shade;
+  }
 }

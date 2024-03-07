@@ -12,44 +12,40 @@
 <body>
   <!-- CSS load hack -->
   <script>;</script>
+  <div class="form login">
+    <div class="form-content">
+      <label for="phone-number">Phone number</label>
+      <input type="number" name="phone-number" id="phone-number" required />
+      <label for="district-locality">District/Locality</label>
+      <select id="district" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+      <button>login</button>
+    </div>
+  </div>
+  <div class="form signup">
+    <div class="form-content">
+      <label for="phone-number">Phone number</label>
+      <input type="number" name="phone-number" id="phone-number" required />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+      <button>sign up</button>
+    </div>
+  </div>
   <div class="nav">
     <div class="left">Kisan:Sevak</div>
     <div class="right if-logged">
     </div>
     <div class="right else-logged">
-      <span>Login</span>
-      <span>Sign up</span>
+      <span class="login-popper">Login</span>
+      <span class="signup-popper">Sign up</span>
     </div>
   </div>
   <div class="nav-pushup"></div>
   <main>
     {% block body %}{% endblock %}
   </main>
-  <div class="form login" hidden>
-    <label for="phone-number">Phone number</label>
-    <input type="number" name="phone-number" id="phone-number" required />
-    <label for="district-locality">District/Locality</label>
-    <select id="district" required />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required />
-  </div>
-  <div class="form signup" hidden>
-    <label for="phone-number">Phone number</label>
-    <input type="number" name="phone-number" id="phone-number" required />
-    <label for="district-locality">District/Locality</label>
-    <select id="district" required />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required />
-  </div>
-  <script>
-    let login = document.querySelector(".login");
-    let signup = document.querySelector(".signup");
-
-    let loginBTN = document.querySelector(".loginBTN");
-    let loginBTN2 = document.querySelector(".loginBTN2");
-    let signupBTN = document.querySelector(".signupBTN");
-    let signupBTN2 = document.querySelector(".signupBTN2");
-  </script>
+  <script type="module" src="./src/base.js"></script>
 </body>
 
 </html>
