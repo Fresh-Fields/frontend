@@ -34,6 +34,8 @@ pyvenv.cfg
 
 .vscode
 
+*.mp4
+
 # jatin's gitignore entries #
 
 # anjali's gitignore entries #

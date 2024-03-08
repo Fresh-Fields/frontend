@@ -44,6 +44,7 @@ body {
       padding: 0 1rem;
       transition: filter 0.4s ease-out;
       transition: transform 0.2s ease-out;
+      cursor: pointer;
 
       &:hover {
         filter: brightness(1.2);
@@ -79,10 +80,22 @@ body {
     background: g.$background;
 
     padding: 4rem;
-
+    border-radius: 0.2rem;  
+    max-width: 200px;
+  
     input {
-      text-decoration: none;
-      border: 0 0 0 2px solid black;
+      outline: none;
+      background: none;
+      border: 0px;
+      border-bottom: 2px solid g.$shade;
+    }
+
+    .wrong {
+      visibility: hidden;
+      background: rgb(255, 125, 125);
+      color: rgb(94, 0, 0);
+      padding: 1rem;
+      border-radius: 0.2rem;
     }
   }
 }

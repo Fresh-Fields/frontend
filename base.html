@@ -16,25 +16,28 @@
     <div class="form-content">
       <label for="phone-number">Phone number</label>
       <input type="number" name="phone-number" id="phone-number" required />
-      <label for="district-locality">District/Locality</label>
-      <select id="district" required />
       <label for="password">Password</label>
       <input type="password" name="password" id="password" required />
-      <button>login</button>
+      <button>Login</button>
+      <div class="wrong">Something went wrong on your end...</div>
     </div>
   </div>
   <div class="form signup">
     <div class="form-content">
       <label for="phone-number">Phone number</label>
       <input type="number" name="phone-number" id="phone-number" required />
+      <label for="district-locality">District/Locality</label>
+      <select id="district" required></select>
       <label for="password">Password</label>
       <input type="password" name="password" id="password" required />
-      <button>sign up</button>
+      <button>Sign Up</button>
+      <div class="wrong">Something went wrong on your end...</div>
     </div>
   </div>
   <div class="nav">
     <div class="left">Kisan:Sevak</div>
     <div class="right if-logged">
+      <span class="logout">Logout</span>
     </div>
     <div class="right else-logged">
       <span class="login-popper">Login</span>
