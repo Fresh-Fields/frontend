@@ -1,0 +1,27 @@
+@use "./global.scss" as g;
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  border: 1px solid g.$shade;
+
+  th,
+  td {
+    padding: 0.2rem;
+    border: 1px solid g.$shade;
+  }
+}
