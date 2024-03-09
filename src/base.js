@@ -25,18 +25,22 @@ if (localStorage.getItem("phone") && localStorage.getItem("phone") != "") {
 
 loginPopper.addEventListener('click', () => {
   signupForm.style.visibility = "hidden";
+  signupForm.querySelector(".wrong").style.visibility = "hidden";
   loginForm.style.visibility = "visible";
 });
 
 signupPopper.addEventListener('click', () => {
   loginForm.style.visibility = "hidden";
+  loginForm.querySelector(".wrong").style.visibility = "hidden";
   signupForm.style.visibility = "visible";
 });
 
 window.addEventListener('keydown', e => {
   if (e.key !== "Escape") return;
   loginForm.style.visibility = "hidden";
+  loginForm.querySelector(".wrong").style.visibility = "hidden";
   signupForm.style.visibility = "hidden";
+  signupForm.querySelector(".wrong").style.visibility = "hidden";
 });
 
 loginSubmit.addEventListener('click', async () => {
@@ -54,7 +58,7 @@ loginSubmit.addEventListener('click', async () => {
 
     console.log(res);
 
-    if (res === -1) {
+    if (res === -1 || !localStorage.getItem("district")) {
       loginForm.querySelector(".wrong").style.visibility = "visible";
       return;
     }
@@ -106,5 +110,9 @@ logoutButton.onclick = () => {
   localStorage.removeItem("phone");
   localStorage.removeItem("district");
   localStorage.removeItem("password");
+  window.location.pathname = "/";
+}
+
+if (!localStorage.getItem("phone") && window.location.pathname != "/") {
   window.location.pathname = "/";
 }

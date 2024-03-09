@@ -125,13 +125,12 @@ onRecv(() => {
       0 // Rabi
     ])
   }).then(res => res.json()).then(data => {
-    console.log(data);
     let cropData = crops.map((crop, index) => ({ crop: crop, value: data[0][index] }));
     cropData.sort((a, b) => a.value - b.value);
 
     let sortedCrops = cropData.map(pair => pair.crop);
     outDiv.innerHTML =
-      `<div class="crop1">${sortedCrops[0]}</div>` +
+      `<div class="crop1">${sortedCrops[0]} (most recommended)</div>` +
       `<div class="crop2">${sortedCrops[1]}</div>` +
       `<div class="crop3">${sortedCrops[2]}</div>`;
   });
