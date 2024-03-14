@@ -1,27 +1,106 @@
 @use "./global.scss" as g;
 
+body{
+  background-color: #ffff; 
+}
+
 main {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+  background-image: url('/vite/public/assets/tropical_leaves.jpg');
 }
 
 .content {
-  padding: 2rem;
+  width: 80%;
+  height: 90%;
+  margin-top: 2.4rem;
+  padding: 4.6rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 60fr 40fr;
+  border: 2px solid black;
+  opacity: 70%;
+  
+}
+.left-side{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr 1.5fr;
+  border: 2px solid black;
 }
 
-table {
-  border-collapse: collapse;
-  margin: 1rem;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
-  border: 1px solid g.$shade;
-
-  th,
-  td {
-    padding: 0.2rem;
-    border: 1px solid g.$shade;
-  }
+h1{
+  color: #39482B;
 }
+
+h3{
+  color: #FFB534;
+}
+
+.griding{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inside{
+  height: 90%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+.result{
+  font-size: 3rem;
+}
+
+.right-side{
+  border: 1px solid black;
+  width: 80%;
+  margin-left: 100px;
+}
+
+.inner-heading{
+  font-size: 1.1rem;
+}
+
+.inner-list > input{
+  height: 40%;
+  width: 60%;
+}
+
+#crop{
+  height: 40%;
+  width: 60%;
+}
+
+
+
+
+
+// table {
+//   border-collapse: collapse;
+//   margin: 1rem;
+//   font-size: 0.9em;
+//   font-family: sans-serif;
+//   min-width: 400px;
+//   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+//   border: 1px solid g.$shade;
+
+//   th,
+//   td {
+//     padding: 0.2rem;
+//     border: 1px solid g.$shade;
+//   }
+// }

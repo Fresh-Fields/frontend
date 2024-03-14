@@ -4,15 +4,37 @@
 {% endblock %}
 {% block body %}
 <div class="content">
-  <h1>Know your potential yield</h1>
-  <h3>Pesticide Usage (tonnes per hectare):</h3>
-  <input type="number" name="pesticide" id="pesticide" value="2.8124" /><br />
-  <h4>Crop planted:</h4>
-  <select name="crop" id="crop">
-    <!-- to be populated in JS -->
-  </select>
-  <h4>Potential yield:</h4>
-  <span class="result">loading...</span> ton/hectare
+  <div class="left-side">
+    <div class="heading center">
+      <h1>Know your potential yield</h1>
+    </div>
+    <div class="list-1 griding">
+      <div class="inner-heading center"><h3>Pesticide Usage (tonnes per hectare):</h3></div>
+      <div class="inner-list center"><input type="number" name="pesticide" id="pesticide" value="2.8124" /><br /></div>
+    </div>
+    <div class="list-2 griding">
+      <div class="inner-heading center"><h3>Crop planted:</h3></div>
+      <div class="inner-list center">
+        <select name="crop" id="crop">
+        <!-- to be populated in JS -->
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="right-side center">
+    <div class="inside">
+      <div class="heading02 center">
+        <h1>Potential yield</h1>
+      </div>
+      <div class="res center">
+        <span class="result">loading...</span>
+      </div>
+    </div>
+  </div>
 </div>
 <script type="module" src="./src/yield.js"></script>
 {% endblock %}let $ = document.querySelector;
+
+<!-- TODO: Add backgroud image
+           Remove borders of all
+-->
