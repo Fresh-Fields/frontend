@@ -58,7 +58,7 @@ loginSubmit.addEventListener('click', async () => {
 
     console.log(res);
 
-    if (res === -1 || !localStorage.getItem("district")) {
+    if (res === -1) {
       loginForm.querySelector(".wrong").style.visibility = "visible";
       return;
     }
@@ -90,10 +90,10 @@ signupSubmit.addEventListener('click', async () => {
 
     console.log(res);
 
-    if (res === -1) {
-      signupForm.querySelector(".wrong").style.visibility = "visible";
-      return;
-    }
+    // if (res === -1) {
+    //   signupForm.querySelector(".wrong").style.visibility = "visible";
+    //   return;
+    // }
 
     localStorage.setItem("phone", phoneNumberInput.value);
     localStorage.setItem("password", passwordInput.value);

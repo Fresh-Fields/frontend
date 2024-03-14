@@ -9,7 +9,7 @@ let districtRainfall = document.querySelector(".district-rainfall");
 let districtTemperature = document.querySelector(".district-temperature");
 
 let getRainfall = (district) => districts[district]?.rainfall;
-let getTemp = (district) => districts[district]?.humidity;
+let getTemp = (district) => districts[district]?.temperature;
 
 mapSelect.innerHTML = Object.keys(districts).map((key, i) =>
   `<option value="${i}">${key}</option>`

@@ -23,9 +23,9 @@ thumb.onclick = () => {
 
 // TODO remove later (like seriously huh)
 document.querySelector(".city").innerHTML = CITY;
-document.querySelector(".avg-humidity").innerHTML = districts[CITY].humidity;
+document.querySelector(".avg-humidity").innerHTML = 79;
 document.querySelector(".avg-rainfall").innerHTML = districts[CITY].rainfall;
-document.querySelector(".avg-temp").innerHTML = 27;
+document.querySelector(".avg-temp").innerHTML = districts[CITY].temperature;
 
 let npkChart = new Chart(npkGraph.getContext("2d"), {
   type: "bar",
@@ -120,7 +120,7 @@ onRecv(() => {
     },
     body: JSON.stringify([
       n[index], p[index], k[index],
-      27, districts[CITY].humidity,
+      districts[CITY].temperature, 78,
       ph[index], districts[CITY].rainfall,
       0 // Rabi
     ])
